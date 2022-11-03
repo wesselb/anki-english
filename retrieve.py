@@ -54,7 +54,7 @@ anki_model = genanki.Model(
     ],
 )
 
-deck = genanki.Deck(1917659204, "English Vocubalry")
+deck = genanki.Deck(1917659204, "English Vocabulary")
 
 for word, meaning in zip(words, word_meanings):
     note = genanki.Note(model=anki_model, fields=[word, meaning])
