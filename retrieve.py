@@ -1,7 +1,10 @@
+import asyncio
 import requests
 import time
 import json
 import genanki
+import shelve
+import aiohttp
 
 
 class RateLimiter:
@@ -9,22 +12,51 @@ class RateLimiter:
         self.rate = rate
         self.last_request = None
 
-    def __enter__(self):
+    async def __aenter__(self):
         if self.last_request is not None:
             while time.time() <= self.last_request + 1 / self.rate:
-                time.sleep(10 / self.rate)
-
-    def __exit__(self, exc_type, exc_value, exc_tb):
+                await asyncio.sleep(1 / self.rate / 10)
         self.last_request = time.time()
+
+    async def __aexit__(self, exc_type, exc_value, exc_tb):
+        pass
+
+
 
 
 api_url = "https://api.dictionaryapi.dev/api/v2/entries/en/{word}"
 api_rate = RateLimiter(rate=5)
 
+responses = {}
+
+
+async def query(session, word):
+    async with api_rate:
+        print("Requesting", word)
+        async with session.get(api_url.format(word=word)) as response:
+            responses[word] = json.loads(await response.text())
+        print("Received", word)
+
+
+async def query_many(words):
+    async with aiohttp.ClientSession() as session:
+        await asyncio.gather(*[query(session, word) for word in words])
+
+        
+
+
 with open("list.txt", "r") as f:
     words = f.read().splitlines()
 
 word_meanings = []
+
+meanings = asyncio.run(query_many(words))
+print(responses.keys())
+
+
+
+
+exit()
 
 for word in words:
     with api_rate:
