@@ -13,7 +13,7 @@ pip install -r requirements.txt
 ## Usage
 
 1. [Register a free account with Merriam-Webster,](https://dictionaryapi.com/)
-    and choose a key for the Merriam-Webster's Collegiate® Dictionary with Audio.
+    and choose a key for Merriam-Webster's Collegiate® Dictionary with Audio.
 
 2. Create a file `config.yaml` that contains this key:
 
