@@ -1,13 +1,20 @@
 import asyncio
-import requests
-import time
 import json
-import genanki
 import shelve
+import time
+
 import aiohttp
+import numpy as np
+import yaml
 
 
 class RateLimiter:
+    """Limit the rate for an API.
+
+    Args:
+        rate (float): Rate.
+    """
+
     def __init__(self, rate):
         self.rate = rate
         self.last_request = None
@@ -22,75 +29,52 @@ class RateLimiter:
         pass
 
 
+# Load the config. This contains API keys.
+with open("config.yaml", "r") as f:
+    config = yaml.safe_load(f)
 
-
-api_url = "https://api.dictionaryapi.dev/api/v2/entries/en/{word}"
-api_rate = RateLimiter(rate=5)
-
-responses = {}
-
-
-async def query(session, word):
-    async with api_rate:
-        print("Requesting", word)
-        async with session.get(api_url.format(word=word)) as response:
-            responses[word] = json.loads(await response.text())
-        print("Received", word)
-
-
-async def query_many(words):
-    async with aiohttp.ClientSession() as session:
-        await asyncio.gather(*[query(session, word) for word in words])
-
-        
-
-
-with open("list.txt", "r") as f:
-    words = f.read().splitlines()
-
-word_meanings = []
-
-meanings = asyncio.run(query_many(words))
-print(responses.keys())
-
-
-
-
-exit()
-
-for word in words:
-    with api_rate:
-        response = requests.get(api_url.format(word=word))
-        word_def = json.loads(response.text)
-        out = ""
-        for meaning in word_def[0]["meanings"]:
-            pos = meaning["partOfSpeech"]
-            for d in meaning["definitions"]:
-                out += f"[{pos}] {d['definition']} "
-        word_meanings.append(out)
-        print(word, out)
-
-anki_model = genanki.Model(
-    1874940493,
-    "Question and Answer",
-    fields=[
-        {"name": "Question"},
-        {"name": "Answer"},
-    ],
-    templates=[
-        {
-            "name": "Card 1",
-            "qfmt": "{{Question}}",
-            "afmt": '{{FrontSide}}<hr id="answer">{{Answer}}',
-        },
-    ],
+# Setup the dictionary API.
+api_url = (
+    f"https://www.dictionaryapi.com/api/v3/references/collegiate/json/"
+    f"{{word}}?key={config['dictionary']}"
 )
+api_rate = RateLimiter(rate=10)
 
-deck = genanki.Deck(1917659204, "English Vocabulary")
+with shelve.open("responses.shelve") as db:
+    if "responses" not in db:
+        db["responses"] = {}
+    responses = dict(db["responses"])
 
-for word, meaning in zip(words, word_meanings):
-    note = genanki.Note(model=anki_model, fields=[word, meaning])
-    deck.add_note(note)
+    async def query(session, word):
+        if word in responses:
+            return
+        async with api_rate:
+            print("Requesting:", word)
+            async with session.get(api_url.format(word=word)) as response:
+                responses[word] = json.loads(await response.text())
+            print("Received:", word)
 
-package = genanki.Package(deck)
-package.write_to_file("english.apkg")
+    async def query_many(words):
+        async with aiohttp.ClientSession() as session:
+            await asyncio.gather(*[query(session, word) for word in words])
+
+    with open("list.txt", "r") as f:
+        words = []
+
+        for word in f.read().splitlines():
+            word = word.lower()
+
+            # Delete possible definition.
+            word = word.split("-")[0].strip()
+
+            # Delete possible prefix "to ".
+            if word.startswith("to "):
+                word = word[3:].strip()
+
+            words.append(word)
+
+        # Store the response for every word.
+        words = sorted(np.unique(words))
+        asyncio.run(query_many(words))
+        db["responses"] = responses
+        db["words"] = words

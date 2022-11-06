@@ -1,6 +1,326 @@
-punctilious
-effusion
-feeble
-meddle
-glee
-inlet
+Punctilious
+Effusion
+Feeble
+Meddle
+Glee
+Inlet
+Dustpan
+Tang
+Privy to
+Bristle
+Perspicacious
+Facetious
+Fractious
+Somnolent
+Convalescence
+Bequest
+Heron
+Carnal
+Environs
+Prow
+Peninsula
+Tenet
+Palpable
+Dilapidated
+Philistine
+Decree
+Ostensibly
+Demonym
+Bigotry
+Pedigree
+Stoic
+Phlegmatic
+Archnemesis
+To chaperone
+Pithy
+Stringent
+Ostensibly
+Acrimonious
+Abrasive
+Indignant
+Windfall
+Rank - ranzig
+Distraught
+Effeminate
+Myriad
+Parsimonious
+Disembark
+Unsullied
+Ravenous
+Acorn
+Coot
+Chauvinist
+Playpen
+Riddance
+Exude
+Toke
+Putrefaction
+Abrasions
+Lividity
+Dusky
+Blotchy
+Fixture
+Inkling
+Grievous
+Close ranks
+Sly
+Crook
+Battered
+Pine
+Countenance
+Pewter
+Mottled
+Treacherous
+Kilter
+Equanimity
+Resuscitated
+Ordinance
+Charred
+Vocation
+Volition
+Brow
+Furrowed
+Sulking
+Preclude
+Fedora
+Curdled
+Rankness
+Visage
+Girder
+Cesspit
+Sibilant
+Miasma
+Chink
+Denture
+Appraising
+Sustain
+Clavicle
+Graft
+Canine
+Feral
+Jangling
+Prying
+Tightrope
+Cooped
+Catalyst
+Pelvis
+Abdomen
+Gritting
+Spangled
+Gleaming
+Blanched
+Bristle
+Sternness
+Bereaved
+Surmise
+Sordid
+Vengeance
+Lest
+Pyre
+Spectacles
+Enigmatic
+Aesthetic
+Tenacity
+Diametrically
+Nigh
+Ineffable
+Bequeath
+Manifestly
+Swath
+Staggeringly
+Audacious
+Chalet
+Geriatrics
+Incarcerated
+Liquidated
+Fervor
+Amiss
+Gauge
+Recuperating
+Linger
+Placate
+Undertow
+Kin
+Gaze
+Relented
+Indignation
+Righteous
+Extradition
+Notorious
+Malaise
+Consigned
+Commensurately
+Expulsion
+Bolster
+Zealot
+Salve
+Memoir
+Limelight
+Perpetuate
+Mundane
+Loom
+Sheer
+Expediency
+Spurred
+Perpetrators
+Atrocity
+Unheralded
+Meticulous
+Fissures
+Spire
+Stained
+Austere
+Hymn
+Immanence
+Howled
+Striations
+Dissolution
+Respite
+Brusque
+Retching
+Curb
+Self-aggrandizing
+Precocious
+Predicament
+Liaise
+Procure
+Platitudes
+Scolding
+Scrutinizing
+Ostentatiously
+Placate
+Lamenting
+Facetious
+Reify
+Candor
+Sage
+Astute
+Harlot
+Siphoning
+Suspenseful
+Splendid
+Valiant
+Exalt
+Commensurable
+Cretinous
+Covert
+Debris
+Avocation
+Tenacious
+Ponderous
+Amok
+Hobo
+Freight
+Bum
+Vagrant
+Gaudy
+Similes
+Tinsel
+Garrulous
+Desiccated
+Deified
+Feted
+Poultry
+Abashed
+Opulence
+Relish
+Proliferate
+Necking
+Surging
+Irreverence
+Edify
+To hurl
+To scorch
+Heresy
+To ooze
+To trickle
+Revered
+Mirth
+Kowtow
+Curry
+Conferring
+Tendentious
+Unwarranted
+Culpable
+Rapscallion
+Peremptory
+Perspicuous
+Aspersion
+Blighter
+Contempt
+Blemish
+Salient
+Dogmatic
+Strident
+Premonition
+Vigilance
+Recliner
+Stifle
+Precipitously
+Overt
+Covert
+Abdicate - resign from
+Allegiance - loyalty
+Unduly - excessively
+Pernicious - harmful
+Sedition - incitement (to riot/rebellion)
+Dissent - disagreement
+Insolvent - unable to pay debts
+Touting - reselling tickets at higher price
+Innocuous - harmless
+Thwart - prevent from accomplishing something
+Dismay - appal
+Slog - work hard over a period of time
+Ruminate - think deeply about something
+Frugal - cheap, unwilling to spend
+Exclave - portion of territory completely separated and surrounded by other territory
+Menial - not requiring much skill
+Impunity - exemption from punishment
+Exquisite
+Frock
+Gallant
+Mart
+Dismal
+Suitor
+Parched
+Accosting
+Sire
+Missives
+Lurid
+Perilous
+Swoon - faint, especially from extreme motion; to be overcome with admiration, adoration, or other strong emotion
+Viscount - nobleman ranking below earl but above baron
+Ample - enough
+Acquit - absolve; clear
+Implore - plead with; beg
+Tutelage - protection of or authority over something or someone
+Morose - sullen, sulky, gloomy
+Provenance - origin
+Posterity - descendants
+Abrogate - avoid, do away with (formal); evade (a duty or responsibility)
+Frivolous - lacking seriousness
+Pristine - immaculate
+Arduous - involving strenuous effort
+Riddance - getting rid of something troublesome
+Sycophant - creep
+Dowry - marriage settlement
+Solemn
+Awry
+Shibboleth
+Genteel - refined
+Acrimony - bitterness
+Vexing - dwarsliggen
+Philistine - cultuurbarbaar
+Promiscuous
+Awry
+Facetious - bantering; treating serious issues with inappropriate humor
+Perilous - dangerous
+Allegory
+Trepidation - fear
+Vernacular - everyday language
+Prerogative - distinctive excellence
+Coaxing - gently pursuading
+Gnarly - lelijk, knoestig
+Nebulous - lacking definition or definite form
+Secular - non-religious
+Perennial

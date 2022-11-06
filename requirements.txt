@@ -1,0 +1,5 @@
+requests
+genanki
+aiohttp
+pyyaml
+numpy
