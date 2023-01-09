@@ -65,7 +65,7 @@ with shelve.open("responses.shelve") as db:
             word = word.lower()
 
             # Delete possible definition.
-            word = word.split("-")[0].strip()
+            word = word.split(" - ", 1)[0].strip()
 
             # Delete possible prefix "to ".
             if word.startswith("to "):
